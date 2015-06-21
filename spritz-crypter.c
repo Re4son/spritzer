@@ -4,7 +4,7 @@
 *			to decrypt and execute payload
 *			depending on the command line arguments
 *                       We are using the experimental SPRITZ cypher
-* 
+*
 *    Author   : Re4son re4son [ at ] whitedome.com.au
 *    Purpose  : to encrypt / decrypt&execute a shellcode
 *    Usage    : Encrypt shellcode:    ./spritz-crypter <password> -e
@@ -240,7 +240,7 @@ main(int argc, char **argv)
 
     if (argc == 1){
         fprintf(stderr,"Please provide a key\n");
-        return -1;     
+        return -1;
     } else {
 	key = (unsigned char *)argv[1];
 	key_length = strlen((char *)key);
@@ -255,7 +255,7 @@ main(int argc, char **argv)
 	for (i = 0; i < (shellcode_length-1); i++) {
             printf("\\x%02x", out[i]);
 	    if (out[i] == 0)
-		badchars ++; 
+		badchars ++;
         }
         printf("\n");
         if (badchars > 0){
@@ -273,7 +273,7 @@ main(int argc, char **argv)
         decrypt(out, shellcode, shellcode_length, key, key_length);
         ret();
     }
-    
+
     return 0;
 }
 

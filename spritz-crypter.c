@@ -229,7 +229,7 @@ int decrypt(unsigned char *out, const unsigned char *c, size_t clen,
     return 0;
 }
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
     unsigned char       out[256];
     unsigned char 	*key;

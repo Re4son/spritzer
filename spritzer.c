@@ -10,8 +10,9 @@
 *    Purpose   : to encrypt / decrypt&execute a shellcode
 *    Platforms : Windows and Linux - both 32 and 64 bit
 *
-*    Compile   : Linux   = gcc spritzer.c -o spritzer
+*    Compile   : Linux   = gcc -z execstack spritzer.c -o spritzer
 *                Windows = gcc spritzer.c -o spritzer.exe
+*			   (compile in VM with NX turned off)
 *
 *    Usage     : Encrypt         : ./spritzer <password> -e
 *                Decrypt & run   : ./spritzer <password>

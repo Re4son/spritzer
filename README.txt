@@ -1,4 +1,4 @@
-/****************************************************************************
+﻿/****************************************************************************
 *    spritzer -- Cross platform Spritz Crypter
 *                Program to encrypt payload with, or
 *                to decrypt and execute payload
@@ -32,6 +32,8 @@
 *                                        - Done
 *
 *    Note      : The encryption function checks for NULL characters and
-*                spits out a warning when found - don't worry about it.
+*                spits out a warning when found. NULL characters stuff up
+*                strlen so you better change the password or hard code the
+*                lenght in main().
 *
 ****************************************************************************/
